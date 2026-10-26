@@ -1,6 +1,5 @@
 DROP TABLE aula;
 DROP TABLE horario_aula;
-
 CREATE TABLE aula
 (
  id INT PRIMARY KEY AUTO_INCREMENT,  
@@ -9,7 +8,6 @@ CREATE TABLE aula
  componente VARCHAR(100) NOT NULL,  
  professor VARCHAR(100) NOT NULL  
 );
-
 CREATE TABLE horario_aula
 (
  id INT PRIMARY KEY AUTO_INCREMENT,  
@@ -17,14 +15,11 @@ CREATE TABLE horario_aula
  dia_semana VARCHAR(7) NOT NULL,  
  ordem INT NOT NULL
 );
-
 ALTER TABLE horario_aula ADD FOREIGN KEY(idaula) REFERENCES aula (id);
-
-# inere dados no BD
 INSERT INTO aula (serie, turma, componente, professor) VALUES
-("2º", "DSB", "Banco de Dados II", "Patrick")
+("2º", "DSB", "Banco de Dados II", "Patrick");
 
-DELETE FROM aula WHERE id = 2;
-
+DELETE FROM aula WHERE id = 10;
 UPDATE aula SET professor = "Patrick"
-WHERE id = 12;
+WHERE id = 2;
+SELECT components, profeo FROM aula WHERE id = 10;
