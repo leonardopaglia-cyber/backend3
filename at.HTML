@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contacto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-wrapper">
+      <h2>Contact form</h2>
+      <p class="subtitle">Please fill in your information and we'll be sending your order in no time.</p>
+
+      <form action="#" method="POST">
+        <!-- Input: Name -->
+        <div class="form-group row">
+          <label for="first-name">Your Name</label>
+          <div class="input-inline">
+            <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+          </div>
+        </div>
+
+        <!-- Input: Email -->
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="e.g. hello@contact.net" required>
+        </div>
+
+        <!-- Input: Phone -->
+        <div class="form-group row">
+          <label for="phone-code">Phone*</label>
+          <div class="input-inline phone-inputs">
+            <input type="text" id="phone-code" name="phone_code" placeholder="###" class="short">
+            <input type="text" id="phone-area" name="phone_area" placeholder="###" class="short">
+            <input type="text" id="phone-number" name="phone_number" placeholder="####" class="medium">
+          </div>
+        </div>
+
+        <!-- Input: Message Subject -->
+        <div class="form-group">
+          <label for="subject">Message Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="other">Other</option>
+            <option value="support">Suporte</option>
+            <option value="sales">Vendas</option>
+          </select>
+        </div>
+
+        <!-- Input: Message -->
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <!-- Verification / Captcha Placeholder -->
+        <div class="form-group row">
+          <label for="captcha">Verification *</label>
+          <div class="captcha-box">
+            <input type="checkbox" id="captcha" required>
+            <span>I'm not a robot</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit" class="btn-submit">SUBMIT FORM</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
